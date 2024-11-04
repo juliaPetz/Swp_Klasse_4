@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-03T15:45:18 MEZ" name="Default suite" finished-at="2024-11-03T15:45:19 MEZ" duration-ms="140">
+  <suite started-at="2024-11-04T14:01:15 MEZ" name="Default suite" finished-at="2024-11-04T14:01:16 MEZ" duration-ms="139">
     <groups>
     </groups>
-    <test started-at="2024-11-03T15:45:18 MEZ" name="Default test" finished-at="2024-11-03T15:45:19 MEZ" duration-ms="140">
-      <class name="testNG.CalculatorTest">
-        <test-method signature="testDivideByZeroThrowsException()[pri:0, instance:testNG.CalculatorTest@34f7cfd9]" started-at="2024-11-03T15:45:18 MEZ" name="testDivideByZeroThrowsException" finished-at="2024-11-03T15:45:18 MEZ" duration-ms="19" status="PASS">
-          <exception class="java.lang.IllegalArgumentException">
+    <test started-at="2024-11-04T14:01:15 MEZ" name="Default test" finished-at="2024-11-04T14:01:16 MEZ" duration-ms="139">
+      <class name="bankingSystem.AccountTest">
+        <test-method signature="testDeposit()[pri:0, instance:bankingSystem.AccountTest@3d1cfad4]" started-at="2024-11-04T14:01:15 MEZ" name="testDeposit" finished-at="2024-11-04T14:01:15 MEZ" duration-ms="31" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeposit -->
+        <test-method signature="testDeposit_InvalidAmount()[pri:0, instance:bankingSystem.AccountTest@3d1cfad4]" started-at="2024-11-04T14:01:16 MEZ" name="testDeposit_InvalidAmount" finished-at="2024-11-04T14:01:16 MEZ" duration-ms="3" status="PASS">
+          <exception class="bankingSystem.InvalidAmountException">
             <message>
-              <![CDATA[Denominator cannot be zero]]>
+              <![CDATA[Deposit amount must be greater than zero.]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Denominator cannot be zero
-at testNG.Calculator.divide(Calculator.java:7)
-at testNG.CalculatorTest.testDivideByZeroThrowsException(CalculatorTest.java:10)
+              <![CDATA[bankingSystem.InvalidAmountException: Deposit amount must be greater than zero.
+at bankingSystem.Account.deposit(Account.java:14)
+at bankingSystem.AccountTest.testDeposit_InvalidAmount(AccountTest.java:20)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -46,11 +50,101 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+          </exception> <!-- bankingSystem.InvalidAmountException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testDivideByZeroThrowsException -->
-      </class> <!-- testNG.CalculatorTest -->
+        </test-method> <!-- testDeposit_InvalidAmount -->
+        <test-method signature="testWithdraw()[pri:0, instance:bankingSystem.AccountTest@3d1cfad4]" started-at="2024-11-04T14:01:16 MEZ" name="testWithdraw" finished-at="2024-11-04T14:01:16 MEZ" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWithdraw -->
+        <test-method signature="testWithdraw_InvalidAmount()[pri:0, instance:bankingSystem.AccountTest@3d1cfad4]" started-at="2024-11-04T14:01:16 MEZ" name="testWithdraw_InvalidAmount" finished-at="2024-11-04T14:01:16 MEZ" duration-ms="2" status="PASS">
+          <exception class="bankingSystem.InvalidAmountException">
+            <message>
+              <![CDATA[Withdrawal amount must be greater than zero.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[bankingSystem.InvalidAmountException: Withdrawal amount must be greater than zero.
+at bankingSystem.Account.withdraw(Account.java:21)
+at bankingSystem.AccountTest.testWithdraw_InvalidAmount(AccountTest.java:39)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- bankingSystem.InvalidAmountException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWithdraw_InvalidAmount -->
+        <test-method signature="testWithdraw_Overdraft()[pri:0, instance:bankingSystem.AccountTest@3d1cfad4]" started-at="2024-11-04T14:01:16 MEZ" name="testWithdraw_Overdraft" finished-at="2024-11-04T14:01:16 MEZ" duration-ms="3" status="PASS">
+          <exception class="bankingSystem.OverdraftException">
+            <message>
+              <![CDATA[Insufficient funds for withdrawal.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[bankingSystem.OverdraftException: Insufficient funds for withdrawal.
+at bankingSystem.Account.withdraw(Account.java:24)
+at bankingSystem.AccountTest.testWithdraw_Overdraft(AccountTest.java:33)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- bankingSystem.OverdraftException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWithdraw_Overdraft -->
+      </class> <!-- bankingSystem.AccountTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

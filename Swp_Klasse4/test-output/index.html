@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,7 +104,27 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testNG.CalculatorTest" class="method navigator-link" hash-for-method="testDivideByZeroThrowsException">testDivideByZeroThrowsException</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="bankingSystem.AccountTest" class="method navigator-link" hash-for-method="testDeposit">testDeposit</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="bankingSystem.AccountTest" class="method navigator-link" hash-for-method="testDeposit_InvalidAmount">testDeposit_InvalidAmount</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="bankingSystem.AccountTest" class="method navigator-link" hash-for-method="testWithdraw">testWithdraw</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="bankingSystem.AccountTest" class="method navigator-link" hash-for-method="testWithdraw_InvalidAmount">testWithdraw_InvalidAmount</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="bankingSystem.AccountTest" class="method navigator-link" hash-for-method="testWithdraw_Overdraft">testWithdraw_Overdraft</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -122,14 +142,42 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testNG.CalculatorTest</span>
+              <span class="class-name">bankingSystem.AccountTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testDivideByZeroThrowsException">
-                  </a> <!-- testDivideByZeroThrowsException -->
-                  <span class="method-name">testDivideByZeroThrowsException</span>
+                  <a name="testDeposit">
+                  </a> <!-- testDeposit -->
+                  <span class="method-name">testDeposit</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDeposit_InvalidAmount">
+                  </a> <!-- testDeposit_InvalidAmount -->
+                  <span class="method-name">testDeposit_InvalidAmount</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWithdraw">
+                  </a> <!-- testWithdraw -->
+                  <span class="method-name">testWithdraw</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWithdraw_InvalidAmount">
+                  </a> <!-- testWithdraw_InvalidAmount -->
+                  <span class="method-name">testWithdraw_InvalidAmount</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWithdraw_Overdraft">
+                  </a> <!-- testWithdraw_Overdraft -->
+                  <span class="method-name">testWithdraw_Overdraft</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -137,7 +185,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/tmp/testng-eclipse--1658331087/testng-customsuite.xml</span>
+            <span class="header-content">/tmp/testng-eclipse--170360869/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -146,7 +194,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testNG.CalculatorTest&quot;/&gt;
+      &lt;class name=&quot;bankingSystem.AccountTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -186,16 +234,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testDivideByZeroThrowsException')
-data.setCell(0, 2, 'testNG.CalculatorTest')
-data.setCell(0, 3, 19);
+data.setCell(0, 1, 'testDeposit')
+data.setCell(0, 2, 'bankingSystem.AccountTest')
+data.setCell(0, 3, 31);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testDeposit_InvalidAmount')
+data.setCell(1, 2, 'bankingSystem.AccountTest')
+data.setCell(1, 3, 3);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testWithdraw_Overdraft')
+data.setCell(2, 2, 'bankingSystem.AccountTest')
+data.setCell(2, 3, 3);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testWithdraw_InvalidAmount')
+data.setCell(3, 2, 'bankingSystem.AccountTest')
+data.setCell(3, 3, 2);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testWithdraw')
+data.setCell(4, 2, 'bankingSystem.AccountTest')
+data.setCell(4, 3, 2);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 19 ms</span>
+              <span class="suite-total-time">Total running time: 41 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -221,10 +285,26 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testNG.CalculatorTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">bankingSystem.AccountTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">testDivideByZeroThrowsException</span>
+                <span class="method-name">testDeposit</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testDeposit_InvalidAmount</span>
+                <span class="method-start">37 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testWithdraw</span>
+                <span class="method-start">51 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testWithdraw_InvalidAmount</span>
+                <span class="method-start">56 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testWithdraw_Overdraft</span>
+                <span class="method-start">66 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
